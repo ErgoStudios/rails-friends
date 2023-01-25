@@ -1,0 +1,44 @@
+
+<% if user_signed_in? %>
+
+
+<h1>Friend List</h1>
+
+
+
+<table class="table  table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Phone Name</th>
+      <th>Email</th>
+      <th>Twitter</th>
+    </tr>
+  </thead>
+
+
+  
+<div id="friends">
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+    <p>
+<!--      <%= link_to "Show this friend", friend %>
+-->
+    </p>
+  <% end %>
+</div>
+
+ <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+<br/>
+<br/>
+<br/>
+
+
+<% else %> 
+
+<h1>HELLO WORLD!</h1>
+<p>This is my first rails Webpage..</p>
+
+
+
+<% end %>

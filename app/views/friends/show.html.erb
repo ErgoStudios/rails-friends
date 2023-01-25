@@ -1,0 +1,23 @@
+
+
+
+
+
+<div class="h-100 p-5 bg-light rounded-3">
+<h2><%= @friend.first_name.capitalize %> <%= @friend.last_name.capitalize  %></h2>
+
+<p><%= @friend.email %> | <%= @friend.phone %> | <%= @friend.twitter %></p>
+<br/>
+
+ <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+  <%= link_to "Back to friends", friends_path, class:"btn btn-dark"%>
+
+
+
+</div>
+
+
+
+
+
+
